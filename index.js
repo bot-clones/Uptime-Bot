@@ -3,7 +3,7 @@ require("express")().listen(1343);
 const db = require("quick.db"); 
 const discord = require("discord.js");
 const client = new discord.Client({ disableEveryone: true });
-client.login("NzgyMjUwMDAwOTAxMzQxMjA0.X8JdFQ.n5clIm1I5OH_MoLr5V3OBycMUSk");
+client.login("NzgyMjUwMDAwOTAxMzQxMjA0.X8JdFQ.rHk27E7zjKQ-j3cqbyc1E1fYgi0");
 const fetch = require("node-fetch");
 const fs = require('fs')
 
@@ -37,7 +37,7 @@ client.on("message", message => {
   if(spl[0] == "u!uptime") {
   var link = spl[1]
   fetch(link).then(() => {
-    if(db.get("linkler").map(z => z.url).includes(link)) return message.channel.send("**⛔ Zaten Eklenmiş !!!**")
+    if(db.get("linkler").map(z => z.url).includes(link)) return message.channel.send("**<a:no1:767698010570227772> Zaten Eklenmiş !!!**")
     
     let yardım = new Discord.RichEmbed()
         .setAuthor(client.user.username, client.user.avatarURL)
